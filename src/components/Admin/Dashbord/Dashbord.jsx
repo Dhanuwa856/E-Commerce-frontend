@@ -14,6 +14,7 @@ import {
 } from "chart.js";
 import axios from "axios";
 import moment from "moment";
+import LoadingScreen from "../../LoadingScreen/LoadingScreen";
 
 // Register Chart.js components
 ChartJS.register(
@@ -36,6 +37,7 @@ function Dashboard() {
   const [barData, setBarData] = useState(null);
   const [doughnutData, setDoughnutData] = useState(null);
   const [error, setError] = useState(null);
+  const [dataIsLoaded, setDataIsLoaded] = useState(false);
 
   const dashboardMetricsURL = `${
     import.meta.env.VITE_API_URL
@@ -51,6 +53,7 @@ function Dashboard() {
         setProductCount(response.data.productCount);
         setTodayOrderCount(response.data.ordersToday);
         setTotalRevenue(response.data.totalRevenue);
+        setDataIsLoaded(true);
       } catch (err) {
         setError("Failed to fetch dashboard metrics. Please try again later.");
       }
@@ -118,15 +121,13 @@ function Dashboard() {
     fetchChartData();
   }, []);
 
+  if (!dataIsLoaded) {
+    return <LoadingScreen additional_hint="Preparing your dashboard..." />;
+  }
+
   return (
     <div className="bg-gray-100 p-6 overflow-hidden">
       <h1 className="text-3xl font-bold mb-4 text-center">Admin Dashboard</h1>
-
-      {error && (
-        <div className="text-red-500 text-center mb-4">
-          <p>{error}</p>
-        </div>
-      )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Card: Total Revenue */}
