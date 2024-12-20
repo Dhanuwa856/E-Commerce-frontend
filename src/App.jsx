@@ -1,7 +1,15 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import AdminHome from "./pages/AdminHome";
 
 function App() {
-  return <div className="text-red-600 text-3xl font-bold font-mono">Hello</div>;
+  return (
+    <>
+      <Routes>
+        <Route path="/admin" element={<AdminHome />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
