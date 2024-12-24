@@ -1,3 +1,113 @@
+// import React, { useState } from "react";
+
+// const Auth = () => {
+//   const [isSignUpMode, setSignUpMode] = useState(false);
+
+//   const toggleMode = () => {
+//     setSignUpMode((prev) => !prev);
+//   };
+
+//   return (
+//     <div className="flex items-center justify-center min-h-screen bg-gray-100">
+//       <div className="relative w-full max-w-4xl h-[500px] overflow-hidden rounded-lg shadow-lg bg-white">
+//         {/* Overlay Panel */}
+//         <div
+//           className={`absolute inset-0 h-full w-full flex transition-transform duration-700 ${
+//             isSignUpMode ? "-translate-x-[100%]" : "translate-x-0"
+//           }`}
+//         >
+//           {/* Left Overlay */}
+//           <div className="w-1/2 bg-gradient-to-r from-red-400 to-red-600 text-white flex flex-col items-center justify-center px-8">
+//             <h2 className="text-3xl font-bold mb-4">
+//               {isSignUpMode ? "Welcome Back!" : "Hello, Friend!"}
+//             </h2>
+//             <p className="text-sm mb-8">
+//               {isSignUpMode
+//                 ? "To keep connected with us please login with your personal info."
+//                 : "Enter your personal details and start your journey with us."}
+//             </p>
+//             <button
+//               className="bg-white text-red-500 px-6 py-2 rounded shadow hover:bg-gray-200"
+//               onClick={toggleMode}
+//             >
+//               {isSignUpMode ? "Sign In" : "Sign Up"}
+//             </button>
+//           </div>
+
+//           {/* Right Overlay */}
+//           <div className="w-1/2 bg-white flex flex-col items-center justify-center px-8">
+//             <h2 className="text-3xl font-bold mb-4">
+//               {isSignUpMode ? "Create Account" : "Sign In"}
+//             </h2>
+//             <p className="text-sm mb-4">
+//               {isSignUpMode
+//                 ? "Use your email for registration"
+//                 : "Use your account"}
+//               {isSignUpMode
+//                 ? " and start your journey with us."
+//                 : " and start your journey with us."}
+//             </p>
+
+//             {/* Form Fields */}
+//             {isSignUpMode ? (
+//               <form className="flex flex-col items-center w-full px-8">
+//                 <input
+//                   type="text"
+//                   placeholder="Name"
+//                   className="w-full mb-4 p-2 border border-gray-300 rounded"
+//                 />
+//                 <input
+//                   type="email"
+//                   placeholder="Email"
+//                   className="w-full mb-4 p-2 border border-gray-300 rounded"
+//                 />
+//                 <input
+//                   type="password"
+//                   placeholder="Password"
+//                   className="w-full mb-4 p-2 border border-gray-300 rounded"
+//                 />
+//                 <button
+//                   type="button"
+//                   className="bg-red-500 text-white px-4 py-2 rounded"
+//                 >
+//                   Sign Up
+//                 </button>
+//               </form>
+//             ) : (
+//               <form className="flex flex-col items-center w-full px-8">
+//                 <input
+//                   type="email"
+//                   placeholder="Email"
+//                   className="w-full mb-4 p-2 border border-gray-300 rounded"
+//                 />
+//                 <input
+//                   type="password"
+//                   placeholder="Password"
+//                   className="w-full mb-4 p-2 border border-gray-300 rounded"
+//                 />
+//                 <a
+//                   href="#"
+//                   className="text-sm text-gray-500 mb-4 hover:underline"
+//                 >
+//                   Forgot your password?
+//                 </a>
+//                 <button
+//                   type="button"
+//                   className="bg-red-500 text-white px-4 py-2 rounded"
+//                 >
+//                   Sign In
+//                 </button>
+//               </form>
+//             )}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Auth;
+
 import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";

@@ -19,6 +19,8 @@ import decodeToken from "../components/DecodeToken/DecodeToken";
 import AddProduct from "../components/Admin/AddProduct/AddProduct";
 import UpdateProduct from "../components/Admin/UpdateProduct/UpdateProduct";
 import AdminUsers from "../components/Admin/Users/AdminUsers";
+import ChangePriceOffer from "../components/Admin/ChangePriceOffer/ChangePriceOffer";
+import CategoryOfferAndPriceAdjustment from "../components/Admin/ChangePriceOffer/ChangePriceOffer";
 
 function AdminHome() {
   const [showWelcomeMessage, setShowWelcomeMessage] = useState(true);
@@ -77,12 +79,12 @@ function AdminHome() {
               Icon={FiHome}
               link_url={"/admin/"}
             />
+            <AdminLink admin_link_name="Orders" Icon={FiShoppingCart} />
             <AdminLink
               admin_link_name="Products"
               Icon={FiBox}
               link_url={"/admin/product"}
             />
-            <AdminLink admin_link_name="Orders" Icon={FiShoppingCart} />
             <AdminLink
               admin_link_name="Users"
               Icon={FiUsers}
@@ -126,6 +128,10 @@ function AdminHome() {
             <Route path="/product/add-product" element={<AddProduct />} />
             <Route path="/product/update-product" element={<UpdateProduct />} />
             <Route path="/users" element={<AdminUsers />} />
+            <Route
+              path="/product/change-price-offers"
+              element={<CategoryOfferAndPriceAdjustment />}
+            />
           </Routes>
         </div>
       </div>

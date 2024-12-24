@@ -6,6 +6,7 @@ import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
 import { toast } from "react-hot-toast";
 import { Link, Navigate } from "react-router-dom";
+import { BiSolidOffer } from "react-icons/bi";
 
 function AdminProduct() {
   const [products, setProducts] = useState([]);
@@ -168,26 +169,36 @@ function AdminProduct() {
               ))}
             </tbody>
           </table>
-          <Link
-            to={"add-product"}
-            className="fixed bottom-6 right-6 bg-[#0A5EB0] hover:bg-[#0A97B0] text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-transform transform hover:scale-110 focus:outline-none"
-            aria-label="Add Product"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-6 h-6"
+          <div className="fixed bottom-6 right-6 flex gap-4">
+            <Link
+              to={"add-product"}
+              className="bg-[#0A5EB0] hover:bg-[#0A97B0] text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-transform transform hover:scale-110 focus:outline-none"
+              aria-label="Add Product"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 4.75v14.5m7.25-7.25H4.75"
-              />
-            </svg>
-          </Link>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 4.75v14.5m7.25-7.25H4.75"
+                />
+              </svg>
+            </Link>
+
+            <Link
+              to={"change-price-offers"}
+              className="bg-[#0A5EB0] hover:bg-[#0A97B0] text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-transform transform hover:scale-110 focus:outline-none text-2xl"
+              aria-label="Change Price & Offers"
+            >
+              <BiSolidOffer />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
