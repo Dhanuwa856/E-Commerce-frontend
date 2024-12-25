@@ -58,7 +58,6 @@ const HeroSection = () => {
 
   return (
     <div className="relative w-[95%] lg:w-full h-[60vh] bg-[#2A3335] overflow-hidden container mx-auto mt-5 rounded-lg px-4 lg:px-8">
-      <section></section>
       {posts.map((post, index) => (
         <motion.div
           key={index}
