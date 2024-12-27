@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../components/NavBar/NavBar";
 import Hero from "../components/Hero/Hero";
 import LogOutBtn from "../components/LogOutBtn/LogOutBtn";
+import BrandLogos from "../components/BrandLogos/BrandLogos";
 
 function HomePage() {
   return (
@@ -9,6 +10,8 @@ function HomePage() {
       <NavBar />
       <Hero />
       {/* <LogOutBtn /> */}
+
+      <BrandLogos />
     </div>
   );
 }
