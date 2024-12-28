@@ -2,6 +2,7 @@ import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { LuCrown } from "react-icons/lu";
 
 const ProductCard = (props) => {
   const renderRating = () => {
@@ -48,6 +49,11 @@ const ProductCard = (props) => {
           {props.isNew && (
             <div className="absolute top-2 left-2 bg-[#0A97B0] text-white text-xs font-semibold px-3 py-1 rounded-full">
               New
+            </div>
+          )}
+          {props.isTop && (
+            <div className="absolute top-2 left-2 bg-[#0A97B0] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center space-x-2 gap-2 capitalize">
+              <LuCrown /> Best Selling
             </div>
           )}
           {/* Cart Icon */}

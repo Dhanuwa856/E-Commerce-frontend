@@ -15,7 +15,6 @@ const LetestProducts = () => {
       .get(APIURL)
       .then((res) => {
         setProducts(res.data.products); // Assuming `products` is an array
-        console.log("Latest Products:", res.data.products);
 
         setLoading(false);
       })

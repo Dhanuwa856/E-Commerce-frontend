@@ -5,6 +5,7 @@ import LogOutBtn from "../components/LogOutBtn/LogOutBtn";
 import BrandLogos from "../components/BrandLogos/BrandLogos";
 import LesetProducts from "../components/LetestProducts/LetestProducts";
 import CouponCard from "../components/Promotions/Promotions";
+import BestSelling from "../components/BestSelling/BestSelling";
 
 function HomePage() {
   return (
@@ -19,7 +20,7 @@ function HomePage() {
         categoryItems={30}
         expiry="2024-12-29T23:59:59"
       />
-      ;
+      <BestSelling />;
     </div>
   );
 }
