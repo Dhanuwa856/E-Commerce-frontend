@@ -37,7 +37,7 @@ const ProductCard = (props) => {
   };
 
   return (
-    <div className="flex justify-center items-center p-4">
+    <div className="flex justify-center items-center p-4 cursor-pointer">
       <div className="max-w-xs w-full bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
         {/* Product Image */}
         <div className="relative">

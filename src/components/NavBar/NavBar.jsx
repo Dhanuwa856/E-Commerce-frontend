@@ -48,14 +48,17 @@ const NavBar = () => {
       <div className="text-white flex items-center space-x-4">
         {isLoggedIn ? (
           <>
+            <span className="text-xl cursor-pointer font-medium hidden lg:flex text-[#FFF] hover:text-[#0A97b0] transition-all duration-300 relative">
+              <BsCart4 />
+              <span className="absolute text-[10px] -top-3 -right-3 w-[15px] h-[15px] bg-[#fff] text-[#0A97B0] font-semibold flex items-center justify-center rounded-full">
+                {1 || 0}
+              </span>
+            </span>
             <img
               src={userData?.image || "https://placehold.co/50"}
               alt="user profile"
-              className="w-[40px] h-[40px] rounded-full cursor-pointer object-cover object-center"
+              className="w-[45px] h-[45px] rounded-full cursor-pointer object-cover object-center"
             />
-            <span className="text-xl cursor-pointer font-medium hidden lg:flex text-[#FFF] hover:text-[#0A97b0] transition-all duration-300">
-              <BsCart4 />
-            </span>
           </>
         ) : (
           <button className="bg-[#0A97B0] text-white px-5 py-2 rounded-full flex items-center shadow-md hover:bg-[#0A5EB0] hover:shadow-lg transition-all duration-300">

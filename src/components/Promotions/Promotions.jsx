@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function PromoBanner() {
   return (
-    <div className="relative w-full max-w-5xl bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-lg overflow-hidden mx-auto shadow-lg mt-10">
+    <div className="relative w-full max-w-5xl bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-lg overflow-hidden mx-auto shadow-lg mt-10 ">
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-200 rounded-full animate-ping opacity-75"></div>
         <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-yellow-200 rounded-full animate-ping opacity-75"></div>

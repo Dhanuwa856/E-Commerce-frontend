@@ -4,8 +4,8 @@ import Hero from "../components/Hero/Hero";
 import LogOutBtn from "../components/LogOutBtn/LogOutBtn";
 import BrandLogos from "../components/BrandLogos/BrandLogos";
 import LesetProducts from "../components/LetestProducts/LetestProducts";
-import CouponCard from "../components/Promotions/Promotions";
 import BestSelling from "../components/BestSelling/BestSelling";
+import PromoBanner from "../components/Promotions/Promotions";
 
 function HomePage() {
   return (
@@ -15,11 +15,7 @@ function HomePage() {
       {/* <LogOutBtn /> */}
       <BrandLogos />
       <LesetProducts />
-      <CouponCard
-        discount={50}
-        categoryItems={30}
-        expiry="2024-12-29T23:59:59"
-      />
+      <PromoBanner />
       <BestSelling />;
     </div>
   );
