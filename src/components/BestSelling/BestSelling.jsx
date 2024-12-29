@@ -15,7 +15,6 @@ function BestSelling() {
       .get(APIURL)
       .then((res) => {
         setProducts(res.data); // Assuming `products` is an array
-        console.log("Best Selling Products:", res.data);
         setLoading(false);
       })
       .catch((error) => {

@@ -10,7 +10,6 @@ import PromoBanner from "../components/Promotions/Promotions";
 function HomePage() {
   return (
     <div>
-      <NavBar />
       <Hero />
       {/* <LogOutBtn /> */}
       <BrandLogos />

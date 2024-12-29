@@ -4,6 +4,7 @@ import { MdLogin, MdMenu, MdClose } from "react-icons/md";
 import NavLink from "../NavLink/NavLink";
 import decodeToken from "../DecodeToken/DecodeToken";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,13 +15,13 @@ const NavBar = () => {
   return (
     <nav className="flex justify-between items-center px-4 py-3 bg-[#2A3335] lg:px-8">
       {/* Logo */}
-      <div className="text-white text-lg font-semibold">
+      <Link className="text-white text-lg font-semibold" to={"/"}>
         <img
           src="/logo_white_text.png"
           alt="website logo"
           className="h-10 cursor-pointer object-contain"
         />
-      </div>
+      </Link>
 
       {/* Navigation Links (Desktop Only) */}
       <ul className="hidden lg:flex space-x-6 text-white font-medium tracking-wide">
@@ -28,13 +29,13 @@ const NavBar = () => {
           <NavLink link_name="shop all" />
         </li>
         <li>
-          <NavLink link_name="makeup" />
+          <NavLink link_name="makeup" link_url="/makeup" state="Makeup" />
         </li>
         <li>
-          <NavLink link_name="skincare" />
+          <NavLink link_name="skincare" link_url="/skincare" state="SkinCare" />
         </li>
         <li>
-          <NavLink link_name="haircare" />
+          <NavLink link_name="haircare" link_url="/haircare" state="HairCare" />
         </li>
         <li>
           <NavLink link_name="about" />
