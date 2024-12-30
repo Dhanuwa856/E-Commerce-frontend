@@ -8,6 +8,7 @@ import Auth from "./components/Login/Login";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./components/ProductPage/ProductPage";
 import NavBar from "./components/NavBar/NavBar";
+import AllProducts from "./components/AllProducts/AllProducts";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           path="/haircare"
           element={<ProductPage categoryName="HairCare" />}
         />
+        <Route path="/all-products" element={<AllProducts />} />
       </Routes>
     </>
   );

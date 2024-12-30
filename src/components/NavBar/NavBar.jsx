@@ -26,16 +26,16 @@ const NavBar = () => {
       {/* Navigation Links (Desktop Only) */}
       <ul className="hidden lg:flex space-x-6 text-white font-medium tracking-wide">
         <li>
-          <NavLink link_name="shop all" />
+          <NavLink link_name="shop all" link_url="/all-products" />
         </li>
         <li>
-          <NavLink link_name="makeup" link_url="/makeup" state="Makeup" />
+          <NavLink link_name="makeup" link_url="/makeup" />
         </li>
         <li>
-          <NavLink link_name="skincare" link_url="/skincare" state="SkinCare" />
+          <NavLink link_name="skincare" link_url="/skincare" />
         </li>
         <li>
-          <NavLink link_name="haircare" link_url="/haircare" state="HairCare" />
+          <NavLink link_name="haircare" link_url="/haircare" />
         </li>
         <li>
           <NavLink link_name="about" />
