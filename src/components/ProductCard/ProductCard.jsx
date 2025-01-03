@@ -3,6 +3,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { LuCrown } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const ProductCard = (props) => {
   const renderRating = () => {
@@ -37,7 +38,10 @@ const ProductCard = (props) => {
   };
 
   return (
-    <div className="flex justify-center items-center p-4 cursor-pointer">
+    <Link
+      to={`/product/${props.id}`}
+      className="flex justify-center items-center p-4 cursor-pointer"
+    >
       <div className="max-w-xs w-full bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
         {/* Product Image */}
         <div className="relative">
@@ -102,7 +106,7 @@ const ProductCard = (props) => {
           <div className="mt-3">{renderRating()}</div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

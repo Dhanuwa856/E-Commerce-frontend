@@ -31,6 +31,7 @@ function AllProducts() {
           },
         });
         setProducts(res.data.products);
+
         setTotalPages(res.data.totalPages);
         setPageLoaded(true);
       } catch (error) {
@@ -166,6 +167,7 @@ function AllProducts() {
         {products.map((product) => (
           <ProductCard
             key={product.product_id}
+            id={product.product_id}
             title={product.name}
             finalPrice={product.finalPrice}
             price={product.price}

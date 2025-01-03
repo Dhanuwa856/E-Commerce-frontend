@@ -47,6 +47,7 @@ const LetestProducts = () => {
           {products.map((product) => (
             <ProductCard
               key={product.id} // Use a unique key
+              id={product.product_id}
               title={product.name}
               finalPrice={product.finalPrice}
               price={product.price}

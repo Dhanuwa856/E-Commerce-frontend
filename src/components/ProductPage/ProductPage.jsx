@@ -96,6 +96,7 @@ function ProductPage(props) {
         {products.map((product) => (
           <ProductCard
             key={product.product_id} // Use a unique key
+            id={product.product_id}
             title={product.name}
             finalPrice={product.finalPrice}
             price={product.price}
@@ -108,6 +109,7 @@ function ProductPage(props) {
           />
         ))}
       </div>
+
       {/* Pagination Controls */}
       {totalPages > 1 && (
         <div className="flex justify-center mt-8 mb-4 gap-2">

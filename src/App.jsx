@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import ProductPage from "./components/ProductPage/ProductPage";
 import NavBar from "./components/NavBar/NavBar";
 import AllProducts from "./components/AllProducts/AllProducts";
+import ItemPage from "./components/ItemPage/ItemPage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           element={<ProductPage categoryName="HairCare" />}
         />
         <Route path="/all-products" element={<AllProducts />} />
+        <Route path="/product/:product_id" element={<ItemPage />} />
       </Routes>
     </>
   );

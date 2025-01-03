@@ -44,6 +44,7 @@ function BestSelling() {
           {products.map((product) => (
             <ProductCard
               key={product.product_id} // Use a unique key
+              id={product.product_id}
               title={product.name}
               finalPrice={product.finalPrice}
               price={product.price}
