@@ -6,6 +6,7 @@ import BrandLogos from "../components/BrandLogos/BrandLogos";
 import LesetProducts from "../components/LetestProducts/LetestProducts";
 import BestSelling from "../components/BestSelling/BestSelling";
 import PromoBanner from "../components/Promotions/Promotions";
+import Footer from "../components/Footer/Footer";
 
 function HomePage() {
   return (

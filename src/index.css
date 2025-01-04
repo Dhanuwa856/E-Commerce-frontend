@@ -12,3 +12,6 @@ body {
   scroll-behavior: smooth;
   scrollbar-width: thin;
 }
+.nav-link a.active hr {
+  display: block;
+}

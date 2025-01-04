@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BsCart4 } from "react-icons/bs";
 import { MdLogin, MdMenu, MdClose } from "react-icons/md";
-import NavLink from "../NavLink/NavLink";
+import Nav_Link from "../NavLink/NavLink";
 import decodeToken from "../DecodeToken/DecodeToken";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -26,22 +26,22 @@ const NavBar = () => {
       {/* Navigation Links (Desktop Only) */}
       <ul className="hidden lg:flex space-x-6 text-white font-medium tracking-wide">
         <li>
-          <NavLink link_name="shop all" link_url="/all-products" />
+          <Nav_Link link_name="shop all" link_url="/all-products" />
         </li>
         <li>
-          <NavLink link_name="makeup" link_url="/makeup" />
+          <Nav_Link link_name="makeup" link_url="/makeup" />
         </li>
         <li>
-          <NavLink link_name="skincare" link_url="/skincare" />
+          <Nav_Link link_name="skincare" link_url="/skincare" />
         </li>
         <li>
-          <NavLink link_name="haircare" link_url="/haircare" />
+          <Nav_Link link_name="haircare" link_url="/haircare" />
         </li>
         <li>
-          <NavLink link_name="about" />
+          <Nav_Link link_name="about" />
         </li>
         <li>
-          <NavLink link_name="contact" />
+          <Nav_Link link_name="contact" />
         </li>
       </ul>
 
@@ -106,22 +106,22 @@ const NavBar = () => {
           {/* Navigation Links */}
           <ul className="flex flex-col space-y-4 text-white font-medium text-lg">
             <li>
-              <NavLink link_name="shop all" />
+              <Nav_Link link_name="shop all" />
             </li>
             <li>
-              <NavLink link_name="makeup" />
+              <Nav_Link link_name="makeup" />
             </li>
             <li>
-              <NavLink link_name="skincare" />
+              <Nav_Link link_name="skincare" />
             </li>
             <li>
-              <NavLink link_name="haircare" />
+              <Nav_Link link_name="haircare" />
             </li>
             <li>
-              <NavLink link_name="about" />
+              <Nav_Link link_name="about" />
             </li>
             <li>
-              <NavLink link_name="contact" />
+              <Nav_Link link_name="contact" />
             </li>
           </ul>
         </motion.div>
